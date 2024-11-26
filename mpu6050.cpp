@@ -166,6 +166,13 @@ void mpu6050::toString(char *buffer, size_t buffer_size, accel accelData, gyro g
         gyro_dps[0], gyro_dps[1], gyro_dps[2]);
 }
 
+/**
+ * [NAME]:        getAngle
+ * [FUNCTION]:    getAngle(float &angle)
+ * [PARAMETERS]:  float &angleFiltered - referência para armazenar o ângulo filtrado
+ * [DESCRIPTION]: Calcula o ângulo de inclinação da gangorra com base nos dados do acelerômetro.
+ */
+
 void mpu6050::getAngle(float &angle) const {
     // Obter dados brutos do acelerômetro
     accel accelData;
